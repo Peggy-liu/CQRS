@@ -1,0 +1,4 @@
+/Users/liupeiqi/Documents/workspace-spring-tool-suite-4-4.6.0.RELEASE/CQRS_common_thing/src/main/java/com/cqrs/example/coreAPI/event/ProductMarkedAsUnsaleableEvent.java
+/Users/liupeiqi/Documents/workspace-spring-tool-suite-4-4.6.0.RELEASE/CQRS_common_thing/src/main/java/com/cqrs/example/coreAPI/event/ProductMarkedAsSaleableEvent.java
+/Users/liupeiqi/Documents/workspace-spring-tool-suite-4-4.6.0.RELEASE/CQRS_common_thing/src/main/java/com/cqrs/example/coreAPI/event/WebTodoAddedEvent.java
+/Users/liupeiqi/Documents/workspace-spring-tool-suite-4-4.6.0.RELEASE/CQRS_common_thing/src/main/java/com/cqrs/example/coreAPI/event/ProductAddedEvent.java
