@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CQRS_command_model/CQRS_command_model.iml" filepath="$PROJECT_DIR$/CQRS_command_model/CQRS_command_model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CQRS_common_thing/CQRS_common_thing.iml" filepath="$PROJECT_DIR$/CQRS_common_thing/CQRS_common_thing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CQRS_impl.iml" filepath="$PROJECT_DIR$/.idea/CQRS_impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CQRS_query_model/CQRS_query_model.iml" filepath="$PROJECT_DIR$/CQRS_query_model/CQRS_query_model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ConfigServer/ConfigServer.iml" filepath="$PROJECT_DIR$/ConfigServer/ConfigServer.iml" />
+    </modules>
+  </component>
+</project>

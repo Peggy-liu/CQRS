@@ -16,7 +16,9 @@ import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -25,33 +27,48 @@ import org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProc
 
 
 @Configuration
+@RefreshScope
 public class RabbitConfiguration {
+
+	@Value("${spring.rabbitmq.host}")
+	private String hostname;
+
+	@Value("${spring.rabbitmq.port}")
+	private int port;
+
+	@Value("${spring.rabbitmq.username}")
+	private String username;
+
+	@Value("${spring.rabbitmq.password}")
+	private String password;
 
 	@Autowired
 	private EmbeddedEventStore store;
 	
 	@Autowired
 	private RoutingKeyResolver resolver;
-	
-	@Bean
-	public RabbitTemplate rabbitTemplate() {
-		RabbitTemplate template = new RabbitTemplate(connectionFactory());
-		//template.setRoutingKey("sample-queue2");
-		return template;
-	}
+
 
 	@Bean
 	ConnectionFactory connectionFactory() {
-		CachingConnectionFactory connectionFactory = new CachingConnectionFactory("localhost");
-		connectionFactory.setUsername("guest");
-		connectionFactory.setPassword("guest");
+		CachingConnectionFactory connectionFactory = new CachingConnectionFactory(hostname, port);
+		connectionFactory.setUsername(username);
+		connectionFactory.setPassword(password);
 		return connectionFactory;
 	}
 
-	@Bean
-	public AmqpAdmin amqpAdmin() {
-		return new RabbitAdmin(connectionFactory());
-	}
+
+//	@Bean
+//	public RabbitTemplate rabbitTemplate() {
+//		RabbitTemplate template = new RabbitTemplate(connectionFactory());
+//		return template;
+//	}
+//
+//
+//	@Bean
+//	public AmqpAdmin amqpAdmin() {
+//		return new RabbitAdmin(connectionFactory());
+//	}
 
 	@Bean
 	public SpringAMQPPublisher publisher() {

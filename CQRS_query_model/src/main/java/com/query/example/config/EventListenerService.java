@@ -5,10 +5,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class EventListenerService {
-	
-	@RabbitListener(queues="sample-queue2")
-	public void process(String data) {
-		System.out.println("messgae received "+ data );
-	}
+//
+//	@RabbitListener(queues="sample-queue2")
+//	public void process(String data) {
+//		System.out.println("messgae received "+ data );
+//	}
 
 }

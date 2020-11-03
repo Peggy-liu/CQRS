@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: command_side
+  cloud:
+    config:
+      uri: http://config-server:8888
+
+
+

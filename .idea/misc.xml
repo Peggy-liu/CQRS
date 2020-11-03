@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/CQRS_command_model/pom.xml" />
+        <option value="$PROJECT_DIR$/CQRS_query_model/pom.xml" />
+        <option value="$PROJECT_DIR$/CQRS_common_thing/pom.xml" />
+        <option value="$PROJECT_DIR$/ConfigServer/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" default="false" project-jdk-name="14" project-jdk-type="JavaSDK" />
+</project>

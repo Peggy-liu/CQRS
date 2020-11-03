@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="CQRS_common_thing" />
+        <module name="CQRS_command_model" />
+        <module name="ConfigServer" />
+        <module name="CQRS_query_model" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ConfigServer" target="11" />
+      <module name="CQRS_command_model" target="11" />
+      <module name="CQRS_common_thing" target="11" />
+      <module name="CQRS_query_model" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="CQRS_command_model" options="-parameters" />
+      <module name="CQRS_query_model" options="-parameters" />
+      <module name="ConfigServer" options="-parameters" />
+    </option>
+  </component>
+</project>

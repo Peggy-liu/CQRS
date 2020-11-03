@@ -10,9 +10,6 @@ import com.cqrs.example.config.RabbitConfiguration;
 
 @SpringBootApplication
 public class CqrsCommandModelApplication {
-
-
-	
 	public static void main(String[] args) {
 		SpringApplication.run(CqrsCommandModelApplication.class, args);
 		

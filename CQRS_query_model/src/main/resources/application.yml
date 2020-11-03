@@ -1,15 +1,17 @@
-server: 
+server:
   port: 8082
 
 spring:
-  h2: 
+  h2:
     console:
       enabled: true
       path: /h2-console
-  datasource: 
+      settings:
+        web-allow-others: true
+  datasource:
     url: jdbc:h2:mem:querydb
     username: sa
-    password: 
+    password:
   rabbitmq:
     host: localhost
     port: 5672
@@ -18,7 +20,11 @@ spring:
 axon:
   eventhandling:
     processors:
-      amqpEvents: 
+      amqpEvents:
         source:  myQueueMessageSource
         mode: subscribing
-        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
