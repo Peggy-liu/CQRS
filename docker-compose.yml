@@ -16,27 +16,10 @@ services:
     container_name: config-server
     ports:
       - "8888:8888"
-  command_side_docker_dependency:
-    build:
-      context: ./CQRS_command_model
-      dockerfile: Dockerfile.dependencies
-      cache_from:
-        - command_side_docker_dependency:0.0.1
-    image: command_side_docker_dependency:0.0.1
-
-  query_side_docker_dependency:
-    build:
-      context: ./CQRS_query_model
-      dockerfile: Dockerfile.dependencies
-      cache_from:
-        - query_side_docker_dependency:0.0.1
-    image: query_side_docker_dependency:0.0.1
 
   query_side_service:
     build:
       context: ./CQRS_query_model
-      cache_from:
-        - query_side_docker_dependency:0.0.1
     image: query_side_service:0.0.1
     container_name: query-side-service
     ports:
@@ -51,8 +34,6 @@ services:
   command_side_service:
     build:
       context: ./CQRS_command_model
-      cache_from:
-        - command_side_docker_dependency:0.0.1
     image: command_side_service:0.0.1
     container_name: command_side_service
     ports:

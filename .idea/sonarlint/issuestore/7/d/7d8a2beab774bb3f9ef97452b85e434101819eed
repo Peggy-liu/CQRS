@@ -1,0 +1,12 @@
+
+Q	java:S125N"<This block of commented-out lines of code should be removed.(ëÕ¦ˆ
+T	java:S106€"9Replace this use of System.out or System.err by a logger.(î¥˜ƒüÿÿÿÿ
+Q	java:S125g"<This block of commented-out lines of code should be removed.(¢Ôï¯
+>
+java:S1604O"(Make this anonymous inner class a lambda(ëŒÜ†
+m
+java:S3077y"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ü­Ñÿ
+f
+java:S3305."PInject this field value directly into "publisher", the only method that uses it.(ÀÉñ—
+Q	java:S125b"<This block of commented-out lines of code should be removed.(‘éûî
+X	java:S125>"<This block of commented-out lines of code should be removed.(«¤­Ç8‘§‹èØ.
