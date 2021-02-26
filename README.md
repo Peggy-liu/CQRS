@@ -1,6 +1,6 @@
 # CQRS
 CQRS implementation with Spring AXON, RabbitMQ
 
-#Usage
+# Usage
 change directory to CQRS \
 docker-compose up
